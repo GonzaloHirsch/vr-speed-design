@@ -15,7 +15,7 @@ La configuración en Android se hizo a partir del [siguiente tutorial](https://d
 ```
 ([source](https://stackoverflow.com/questions/71012488/please-initialize-cardboard-xr-loader-before-calling-this-function))
 
-Para poder permitir el **Build & Run** es necesario activar **USB Debugging**, se puede hacer con el [siguiente tutorial](https://developer.android.com/studio/debug/dev-options).
+Para poder permitir el **Build & Run** es necesario activar **USB Debugging**, se puede hacer con el [siguiente tutorial](https://developer.android.com/studio/debug/dev-options). Es importante que el celular esté desbloqueado para que funcione.
 
 # Builds
 
