@@ -47,6 +47,7 @@ sysinfo.txt
 
 # Builds
 *.apk
+DEPLOY*
 
 ### Rider ###
 .idea/

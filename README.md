@@ -17,6 +17,10 @@ La configuración en Android se hizo a partir del [siguiente tutorial](https://d
 
 Para poder permitir el **Build & Run** es necesario activar **USB Debugging**, se puede hacer con el [siguiente tutorial](https://developer.android.com/studio/debug/dev-options).
 
+# Builds
+
+Los builds deberían hacerse y guardarse en una carpeta llamada "DEPLOY" (el nombre es importante, ya está ignorado). Sale un prompt para el nombre donde se guarda el build.
+
 # Notas
 
 El proyecto fue creado a partir de la versión 2021.3.8f1 de Unit (Silicon, LTS).
