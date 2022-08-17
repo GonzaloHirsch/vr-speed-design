@@ -19,7 +19,7 @@ Para poder permitir el **Build & Run** es necesario activar **USB Debugging**, s
 
 ## Teletransportador
 
-Para poder activar la teletransportación, la superficie en la que uno se puede teletransportar tiene que tener el tag **TeleportEnabled** y la layer **TeleportEnabled**.
+Para poder activar la teletransportación, la superficie en la que uno se puede teletransportar tiene que tener el tag **TeleportEnabled** y la layer **TeleportEnabled**. 
 
 # Builds
 
