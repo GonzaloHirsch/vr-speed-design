@@ -17,6 +17,10 @@ La configuración en Android se hizo a partir del [siguiente tutorial](https://d
 
 Para poder permitir el **Build & Run** es necesario activar **USB Debugging**, se puede hacer con el [siguiente tutorial](https://developer.android.com/studio/debug/dev-options). Es importante que el celular esté desbloqueado para que funcione.
 
+## Teletransportador
+
+Para poder activar la teletransportación, la superficie en la que uno se puede teletransportar tiene que tener el tag **TeleportEnabled** y la layer **TeleportEnabled**.
+
 # Builds
 
 Los builds deberían hacerse y guardarse en una carpeta llamada "DEPLOY" (el nombre es importante, ya está ignorado). Sale un prompt para el nombre donde se guarda el build.
