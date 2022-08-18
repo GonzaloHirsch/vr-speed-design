@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Checks for screen touches.
-        if (Google.XR.Cardboard.Api.IsTriggerPressed)
+        if (ActionMapper.GetClick())
         {
             // If the trigger is pressed while looking at a teleport-enabled place
             // If marker is enabled, it's because the position is valid so it can teleport
