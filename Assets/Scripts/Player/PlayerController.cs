@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         this.teleportMarker.SetActive(this.markerEnabled);  // Activate the teleport marker only if the marker should be enabled
         // If the marker is enabled, calculate the position and set it
         if (this.markerEnabled) {
-            this.nextPosition = new Vector3(hit.point.x, this.transform.position.y, hit.point.z);
+            this.nextPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z);
             this.teleportMarker.transform.position = this.nextPosition;
         }
 
