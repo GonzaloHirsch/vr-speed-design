@@ -6,7 +6,7 @@ public class CircleAround : MonoBehaviour
 {
     public float rotateSpeed = 5f;
     public float radius = 0.1f;
-    public bool debug = true;
+    public bool debug = false;
 
     private Vector3 centre;
     private float angle;
