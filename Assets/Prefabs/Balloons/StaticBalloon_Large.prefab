@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 6716595192615829678}
   - component: {fileID: 1671812760288797640}
   - component: {fileID: 1050678824629768926}
+  - component: {fileID: -2028401468380786290}
   m_Layer: 20
   m_Name: StaticBalloon_Large
   m_TagString: Interactable
@@ -159,6 +160,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   points: 1
+--- !u!114 &-2028401468380786290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598178383212296764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e336e10f4f886482dba4a3b78f4fe87f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6338247851594321586
 GameObject:
   m_ObjectHideFlags: 0

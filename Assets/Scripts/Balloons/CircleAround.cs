@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CircleAround : MonoBehaviour
+public class CircleAround : Balloon
 {
     public float rotateSpeed = 5f;
     public float radius = 0.1f;
-    public bool debug = false;
+    public bool debug = true;
 
     private Vector3 centre;
     private float angle;

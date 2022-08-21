@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UpAndDown : MonoBehaviour
+public class UpAndDown : Balloon
 {
     private Vector3 initialPosition;
 

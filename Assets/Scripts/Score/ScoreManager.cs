@@ -14,7 +14,7 @@ public class ScoreManager : Framework.MonoBehaviorSingleton<ScoreManager>
 
     void Update()
     {
-        if (this.previousScore < Score.Instance.GetScore()) {
+        if (!Mathf.Approximately(this.previousScore, Score.Instance.GetScore())) {
             this.previousScore = Score.Instance.GetScore();
             this.scoreText.text = this.previousScore.ToString();
         }

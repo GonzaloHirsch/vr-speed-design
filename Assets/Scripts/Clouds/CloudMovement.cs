@@ -4,36 +4,23 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
-    public float velocity;
+    public float velocityMax = 15f;
+    public float velocityMin = 5f;
+    public float maxDistance = 50f;
+    public Vector3 direction = new Vector3(1, 0, 0);
+    private float velocity;
+    private float newPos;
     private Vector3 startPos;
     
-    
-    // Start is called before the first frame update
     void Start()
     {
-        velocity = Random.Range(5f, 15F);
-        startPos = transform.position;
+        this.velocity = Random.Range(this.velocityMin, this.velocityMax) * (Random.Range(0f, 1f) > 0.5 ? 1 : -1);
+        this.startPos = this.transform.position;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (transform.position[0] > 300)
-        {
-            ResetCloud();
-            return;
-        }
-        transform.position += velocity * new Vector3(Time.deltaTime, 0, 0);
-    }
-
-    private void ResetCloud()
-    {
-        velocity = Random.Range(5f, 15F);
-        float newZ = Random.Range(-5f, 5f);
-        if (transform.position[2] + newZ < 150)
-        {
-            newZ = -newZ;
-        }
-        transform.position = startPos + new Vector3(-500, 0, newZ);
+        this.newPos = Mathf.Sin(Time.time * this.velocity) * this.maxDistance;
+        transform.position = this.startPos + this.direction * this.newPos;
     }
 }

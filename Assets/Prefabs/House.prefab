@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1088305195555690398}
   - component: {fileID: 1088305195555690393}
   - component: {fileID: 1088305195555690392}
-  - component: {fileID: 1088305195555690395}
   m_Layer: 0
   m_Name: Chimenea
   m_TagString: Untagged
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1088305195555690395
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088305195555690394}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1088305196019281057
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +128,6 @@ GameObject:
   - component: {fileID: 1088305196255709121}
   - component: {fileID: 1088305196255709120}
   - component: {fileID: 1088305196255709123}
-  - component: {fileID: 1088305196255709122}
   m_Layer: 0
   m_Name: Base_Casa
   m_TagString: Untagged
@@ -215,19 +200,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1088305196255709122
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088305196255709133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1088305196870990188
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +211,6 @@ GameObject:
   - component: {fileID: 1088305196870990176}
   - component: {fileID: 1088305196870990179}
   - component: {fileID: 1088305196870990178}
-  - component: {fileID: 1088305196870990189}
   m_Layer: 0
   m_Name: Techo_Casa
   m_TagString: Untagged
@@ -312,16 +283,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1088305196870990189
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088305196870990188}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}

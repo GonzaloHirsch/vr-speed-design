@@ -77,6 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotateSpeed: 0.2
   radius: 10
+  debug: 1
 --- !u!1 &4274531695913701078
 GameObject:
   m_ObjectHideFlags: 0

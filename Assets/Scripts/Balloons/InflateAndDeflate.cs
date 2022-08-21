@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InflateAndDeflate : MonoBehaviour
+public class InflateAndDeflate : Balloon
 {
     private Vector3 initialScale;
     public float scaleFrecuency = 0.5f;
