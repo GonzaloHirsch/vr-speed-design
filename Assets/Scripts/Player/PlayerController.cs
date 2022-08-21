@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         // Casts ray towards camera's forward direction, to detect if a GameObject is being gazed at
         RaycastHit hit;
-        if (Physics.Raycast(this.transform.position + this.cameraOffset.transform.localPosition, Camera.main.transform.forward, out hit, maxDistance, this.raycastMask))
+        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, maxDistance, this.raycastMask))
         {
             // GameObject detected in front of the camera.
             if (gazedAtObject != hit.transform.gameObject)
@@ -73,8 +73,8 @@ public class PlayerController : MonoBehaviour
     }
 
     // Debug, dibuja un rayo en la dirección donde está mirando la cámara
-    // void OnDrawGizmos()
-    // {
-    //     Debug.DrawRay(this.transform.position + this.cameraOffset.transform.localPosition, Camera.main.transform.forward, Color.red, maxDistance);
-    // }
+    void OnDrawGizmos()
+    {
+        Debug.DrawRay(this.transform.position + this.cameraOffset.transform.localPosition, Camera.main.transform.forward, Color.red, maxDistance);
+    }
 }
