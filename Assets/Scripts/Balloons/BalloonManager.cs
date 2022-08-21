@@ -2,8 +2,9 @@ public class BalloonManager : Framework.MonoBehaviorSingleton<BalloonManager>
 {
     private Balloon[] balloons;
 
-    void Start()
+    protected override void Awake()
     {
+        base.Awake();
         this.balloons = FindObjectsOfType<Balloon>();
     }
 

@@ -8,10 +8,9 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
     private bool gameStarted = false;
     private bool gameFinished = false;
 
-    void Start () {
-        // Start by disabling all the balloons until you hit play and resetting the score
-        BalloonManager.Instance.DisableAll();
-        Score.Instance.ResetScore();
+    void Start()
+    {
+        this.SetupGame();
     }
 
     void Update()
@@ -28,7 +27,8 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
         BalloonManager.Instance.EnableAll();    // Enable all balloons
     }
 
-    public void ResetGame() {
+    public void ResetGame()
+    {
         Score.Instance.ResetScore();
         this.gameStarted = true;
         this.gameFinished = false;
@@ -36,11 +36,23 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
         BalloonManager.Instance.EnableAll();    // Enable all balloons
     }
 
-    public float GetTimeLeft() {
-        return this.timeLimit - (Time.time - this.startTime);
+    public void SetupGame()
+    {
+        // Start by disabling all the balloons until you hit play and resetting the score
+        BalloonManager.Instance.DisableAll();
+        this.gameStarted = false;
+        this.gameFinished = false;
+        this.startTime = 0f;
+        Score.Instance.ResetScore();
     }
 
-    public bool IsGamePlaying() {
+    public float GetTimeLeft()
+    {
+        return this.gameStarted ? this.timeLimit - (Time.time - this.startTime) : this.timeLimit;
+    }
+
+    public bool IsGamePlaying()
+    {
         return this.gameStarted && !this.gameFinished;
     }
 

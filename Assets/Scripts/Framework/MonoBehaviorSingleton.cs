@@ -41,7 +41,7 @@ namespace Framework
 			get { return _destroyed; }
 		}
 
-		public void Awake()
+		protected virtual void Awake()
 		{
 			if (_instance == null || _destroyed)
 			{
