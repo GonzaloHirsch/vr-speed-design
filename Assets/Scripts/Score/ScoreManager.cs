@@ -10,6 +10,7 @@ public class ScoreManager : Framework.MonoBehaviorSingleton<ScoreManager>
 
     void Start() {
         if (this.scoreText == null) Debug.LogError("[ScoreManager] Missing ScoreText Text property!");
+        this.scoreText.text = Score.Instance.GetScore().ToString();
     }
 
     void Update()

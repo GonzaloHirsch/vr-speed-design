@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
@@ -38,11 +36,19 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
         BalloonManager.Instance.EnableAll();    // Enable all balloons
     }
 
+    public float GetTimeLeft() {
+        return this.timeLimit - (Time.time - this.startTime);
+    }
+
+    public bool IsGamePlaying() {
+        return this.gameStarted && !this.gameFinished;
+    }
+
     private void CheckGameOver()
     {
         // Elapsed time is more than the limit, game is over
         // Balloons should be disabled in order to prevent the player from popping more
-        if (this.gameStarted && !this.gameFinished && Time.time - this.startTime >= this.timeLimit)
+        if (this.IsGamePlaying() && Time.time - this.startTime >= this.timeLimit)
         {
             BalloonManager.Instance.DisableAll();   // Disable all balloons
             this.gameFinished = true;

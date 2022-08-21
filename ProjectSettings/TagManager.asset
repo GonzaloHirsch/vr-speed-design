@@ -6,6 +6,7 @@ TagManager:
   tags:
   - TeleportEnabled
   - Interactable
+  - Prop
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - 
   - Interactable
   - TeleportEnabled
-  - 
+  - Prop
   - 
   - 
   - 

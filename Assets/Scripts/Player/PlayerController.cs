@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
 
     void Awake() {
         // Create mask by setting the explicit tags
-        this.raycastMask = LayerMask.GetMask(Constants.INTERACTABLE_TAG, Constants.TELEPORT_TAG);
+        this.raycastMask = LayerMask.GetMask(Constants.INTERACTABLE_TAG, Constants.TELEPORT_TAG, Constants.PROP_TAG);
     }
 
     void Update()
