@@ -32,15 +32,15 @@ public class PlayerController : MonoBehaviour
             if (gazedAtObject != hit.transform.gameObject)
             {
                 // New GameObject.
-                if (this.canSendGazeEvents()) gazedAtObject?.SendMessage("OnPointerExit");
+                // if (this.canSendGazeEvents()) gazedAtObject?.SendMessage("OnPointerExit");
                 gazedAtObject = hit.transform.gameObject;
-                if (this.canSendGazeEvents()) gazedAtObject.SendMessage("OnPointerEnter");
+                // if (this.canSendGazeEvents()) gazedAtObject.SendMessage("OnPointerEnter");
             }
         }
         else
         {
             // No GameObject detected in front of the camera.
-            if (this.canSendGazeEvents()) gazedAtObject?.SendMessage("OnPointerExit");
+            // if (this.canSendGazeEvents()) gazedAtObject?.SendMessage("OnPointerExit");
             gazedAtObject = null;
         }
 
