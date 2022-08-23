@@ -7,6 +7,7 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
     private float startTime = 0f;
     private bool gameStarted = false;
     private bool gameFinished = false;
+    private float elapsedTime = 0f;
 
     void Start()
     {
@@ -25,15 +26,12 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
         this.gameFinished = false;
         this.startTime = Time.time;
         BalloonManager.Instance.EnableAll();    // Enable all balloons
+        TimeSoundManager.Instance.StartSound(); // Start ticking sound
     }
 
     public void ResetGame()
     {
-        Score.Instance.ResetScore();
-        this.gameStarted = true;
-        this.gameFinished = false;
-        this.startTime = Time.time;
-        BalloonManager.Instance.EnableAll();    // Enable all balloons
+        this.StartGame();
     }
 
     public void SetupGame()
@@ -48,7 +46,12 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
 
     public float GetTimeLeft()
     {
-        return this.gameStarted ? this.timeLimit - (Time.time - this.startTime) : this.timeLimit;
+        return this.gameStarted ? this.timeLimit - this.elapsedTime : this.timeLimit;
+    }
+    
+    public float GetElapsedTime()
+    {
+        return this.gameStarted ? this.elapsedTime : 0f;
     }
 
     public bool IsGamePlaying()
@@ -60,10 +63,12 @@ public class GameManager : Framework.MonoBehaviorSingleton<GameManager>
     {
         // Elapsed time is more than the limit, game is over
         // Balloons should be disabled in order to prevent the player from popping more
-        if (this.IsGamePlaying() && Time.time - this.startTime >= this.timeLimit)
+        this.elapsedTime = Time.time - this.startTime;
+        if (this.IsGamePlaying() && this.elapsedTime >= this.timeLimit)
         {
             BalloonManager.Instance.DisableAll();   // Disable all balloons
             this.gameFinished = true;
+            TimeSoundManager.Instance.StopSound(); // Stop ticking sound
         }
     }
 }
