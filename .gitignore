@@ -18,6 +18,7 @@ ehthumbs.db
 Assets/AssetStoreTools*
 Assets/StreamingAssets/Audio/*
 Assets/Tmp
+MonoBleedingEdge
 
 # Visual Studio cache directory
 .vs/
