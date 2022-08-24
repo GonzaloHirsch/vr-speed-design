@@ -17,7 +17,6 @@ public class FollowObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
         transform.position = follow.transform.position - relativePosition;
     }
 }
