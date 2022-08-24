@@ -11,59 +11,44 @@ public class Helicopter : MonoBehaviour
     private bool _isRotating = false;
     private Vector3 _initialAngle;
     private Vector3 _prevAngle;
-    [SerializeField] private AudioSource audioSource;
 
     void Start()
     {
+        Vector3 initialPos = transform.position;
 
-        GetComponent<AudioSource>().Play();
+        _prevAngle = transform.rotation.eulerAngles;
 
+        List<Vector3> points = new List<Vector3>
+        {
+            new Vector3(0, 10, 0),
+            new Vector3(-150, -30, 0),
+            new Vector3(0, -10, 150),
+            new Vector3(110, -100, 0),
+            new Vector3(40, 170, 0),
+            new Vector3(0, 0, -150),
+        };
 
         _positions = new List<Vector3>();
-        _angles = new List<Vector3>();
-        Vector3 initialPos = transform.position;
-        _initialAngle = transform.rotation.eulerAngles;
-        _prevAngle = _initialAngle;
+        _angles = new List<Vector3>
+        {
+            new Vector3(0,0, 0),
+            new Vector3(0,0, 0),
+            new Vector3(0, 90,0),
+            new Vector3(0, 90, 0),
+            new Vector3(0, 0, 0),
+            new Vector3(0, 90, 0),
+            new Vector3(0,90,0)
+        };
 
-        Vector3 prevAngle = new Vector3(0, 0, 0);
-        Vector3 prevPosition = initialPos + new Vector3(0, 10, 0);
+        Vector3 prevPoint = initialPos;
 
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
-
-        prevPosition += new Vector3(-150, -30, 0);
-        prevAngle = new Vector3(0,0, 0);
-
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
-
-
-        prevPosition += new Vector3(0, -10, 150);
-        prevAngle = new Vector3(0, 90,0);
-
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
-
-        prevPosition += new Vector3(110, -100, 0);
-        prevAngle = new Vector3(0, 90, 0);
-
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
-
-        prevPosition += new Vector3(0, 300, 0);
-        prevAngle = new Vector3(0, 0, 0);
-
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
-
-        prevPosition += new Vector3(0, 0, -150);
-        prevAngle = new Vector3(0, 90, 0);
-
-        _positions.Add(prevPosition);
-        _angles.Add(prevAngle);
+        for (int i = 0; i < points.Count; i++)
+        {
+            _positions.Add(prevPoint + points[i]);
+            prevPoint = _positions[i];
+        }
 
         _positions.Add(initialPos);
-        _angles.Add(new Vector3(0,90,0));
 
         _currentTarget = 0;
     }
@@ -78,6 +63,11 @@ public class Helicopter : MonoBehaviour
         {
             moveToNextPosition();
         }
+    }
+
+    private void addPosition(Vector3 position)
+    {
+        
     }
 
     private void moveToNextPosition()
