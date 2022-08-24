@@ -73,8 +73,8 @@ public class PlayerController : MonoBehaviour
     }
 
     // Debug, dibuja un rayo en la dirección donde está mirando la cámara
-    void OnDrawGizmos()
-    {
-        Debug.DrawRay(this.transform.position + this.cameraOffset.transform.localPosition, Camera.main.transform.forward, Color.red, maxDistance);
-    }
+    //void OnDrawGizmos()
+    //{
+    //    Debug.DrawRay(this.transform.position + this.cameraOffset.transform.localPosition, Camera.main.transform.forward, Color.red, maxDistance);
+    //}
 }

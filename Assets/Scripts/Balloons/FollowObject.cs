@@ -8,6 +8,12 @@ public class FollowObject : MonoBehaviour
     public GameObject follow;
 
     private Vector3 relativePosition;
+
+    private void OnEnable()
+    {
+        transform.position = follow.transform.position;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
